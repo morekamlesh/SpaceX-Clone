@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- SpaceX Clone Date 20/05/2023 -->
+<!-- Created by :- Kamlesh More -->
+<!-- Email :- kamleshrm007@gmail.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX</title>
+    <link rel="shortcut icon" href="./images/fevicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./main.css">
+    <style>
+            #wrapper{
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            .slide{
+              background-color: none;  
+              color: white;
+              padding: 0.8rem 2.3rem;
+              box-shadow: 5px 5px 7px 0px #0000003f;
+              position: relative;
+              z-index: 1;
+          }
+          .slide::before{
+              content: '';
+              background-color: white;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              position: absolute;
+              transform: scaleY(0);
+              transform-origin: bottom;
+              transition-timing-function: ease-in-out;
+              transition: all 400ms;
+              z-index: -1;
+          }
+          .slide:hover::before{
+              transform: scaleY(1);
+          }
+          .slide:hover{
+              cursor: pointer;
+          }
+          a {
+              color: #fff;
+              text-transform: uppercase;
+              text-decoration: none;
+              padding-bottom: 3px;
+              position: relative;
+            }
+            a:after {    
+              background: none repeat scroll 0 0 transparent;
+              bottom: 0;
+              content: "";
+              display: block;
+              height: 2px;
+              left: 50%;
+              position: absolute;
+              background: #fff;
+              transition: width 0.3s ease 0s, left 0.3s ease 0s;
+              width: 0;
+            }
+            a:hover:after { 
+              width: 100%; 
+              left: 0; 
+            }    
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="background image" class="bg-[url('./images/Vandy_desktop1_686164ccc7.jpg')] flex flex-row bg-cover relative h-screen">
+            <!-- Header -->
+            <div class="w-52 cursor-pointer m-10">
+                <!-- spacex svg -->
+                <svg version="1.1" x="0px" y="0px" viewBox="0 0 400 50" alt="SpaceX Logo">
+                    <title>SpaceX Logo</title>
+                    <g class="letter_s">
+                      <path class="fill-white" d="M37.5,30.5H10.9v-6.6h34.3c-0.9-2.8-3.8-5.4-8.9-5.4H11.4c-5.7,0-9,2.1-9,6.7v4.9c0,4,3.4,6.3,8.4,6.3h26.9v7H1.5
+                      c0.9,3.8,3.8,5.8,9,5.8h27.1c5.7,0,8.5-2.2,8.5-6.9v-4.9C46.1,33.1,42.8,30.8,37.5,30.5z"></path>
+                    </g>
+                    <g class="letter_p">
+                      <path class="fill-white" d="M91.8,18.6H59v30.7h9.3V37.5h24.2c6.7,0,10.4-2.3,10.4-7.7v-3.4C102.8,21.4,98.6,18.6,91.8,18.6z M94.8,28.4
+                      c0,2.2-0.4,3.4-4,3.4H68.3l0.1-8h22c4,0,4.5,1.2,4.5,3.3V28.4z"></path>
+                    </g>
+                    <g class="letter_a">
+                      <polygon class="fill-white" points="129.9,17.3 124.3,24.2 133.8,37.3 114,37.3 109.1,42.5 137.7,42.5 142.6,49.3 153.6,49.3 	"></polygon>
+                    </g>
+                    <g class="letter_c">
+                      <path class="fill-white" d="M171.4,23.9h34.8c-0.9-3.6-4.4-5.4-9.4-5.4h-26c-4.5,0-8.8,1.8-8.8,6.7v17.2c0,4.9,4.3,6.7,8.8,6.7h26.3
+                      c6,0,8.1-1.7,9.1-5.8h-34.8V23.9z"></path>
+                    </g>
+                    <g class="letter_e">
+                      <polygon class="fill-white" points="228.3,43.5 228.3,34.1 247,34.1 247,28.9 218.9,28.9 218.9,49.3 260.4,49.3 260.4,43.5 	"></polygon>
+                      <rect class="fill-white" x="219.9" y="18.6" width="41.9" height="5.4"></rect>
+                    </g>
+                    <g class="letter_x">
+                      <path class="fill-white" d="M287.6,18.6H273l17.2,12.6c2.5-1.7,5.4-3.5,8-5L287.6,18.6z"></path>
+                      <path class="fill-white" d="M308.8,34.3c-2.5,1.7-5,3.6-7.4,5.4l13,9.5h14.7L308.8,34.3z"></path>
+                    </g>
+                    <g class="letter_swoosh">
+                      <path class="fill-white" d="M399,0.7c-80,4.6-117,38.8-125.3,46.9l-1.7,1.6h14.8C326.8,9.1,384.3,2,399,0.7L399,0.7z"></path>
+                    </g>
+                  </svg>
+            </div>
+            <!-- navigation bar -->
+        <ul class="flex mt-12  ">
+                <li class="text-white font-bold font-dinbold text-sm tracking-tighter  pr-5 "><a href="#">FALCON 9</a></li>
+                <li class="text-white font-bold font-dinbold text-sm tracking-tighter  pr-5"><a href="#">FALCON HEAVY</a></li>
+                <li class="text-white font-bold font-dinbold text-sm tracking-tighter  pr-5"><a href="#">DRAGON</a></li>
+                <li class="text-white font-bold font-dinbold text-sm tracking-tighter  pr-5"><a href="#">STARSHIP</a></li>
+                <li class="text-white font-bold font-dinbold text-sm tracking-tighter  pr-5"><a href="#">HUMAN SPACEFLIGHT</a></li>
+                <li class="text-white font-bold font-dinbold text-sm tracking-tighter  pr-5"><a href="#">RIDESHARE</a></li>
+                <li class="text-white font-bold font-dinbold text-sm tracking-tighter  pr-5"><a href="#">STARSHIELD</a></li>
+                <li class="text-white font-bold font-dinbold text-sm tracking-tighter  pr-5"><a href="#">STARLINK</a></li>
+            
+            </ul>
+            <!-- Hyperlink -->
+            <div class="m-11">
+                <a href="#" class="text-white font-bold font-dinbold text-sm tracking-tighter ml-11">SHOP</a>
+            </div>
+            <div class="mt-12">
+              <div class="w-4 h-[2px] bg-white m-[2px]"></div>
+              <div class="w-4 h-[2px] bg-white m-[2px]"></div>
+              <div class="w-4 h-[2px] bg-white m-[2px]"></div>
+            </div>
+            <!-- Heading  -->
+            <div class="absolute top-80 left-12 space-y-5">
+              <h2 class="font-dinbold text-white text-xl">UPCOMING LAUNCH</h2>
+              <h1 class="text-5xl font-bold text-white font-dinbold tracking-tighter">IRIDIUM ONEWEB <br> MISSION</h1>
+              <button class="text-white text-sm font-dinbold border-2 font-bold py-4 px-14 my-10
+              hover:bg-white hover:text-black transition-all duration-400 slide">WATCH</button>
+            </div>
+        </div>
+    </div>
+    <!-- backgronf image 2 -->
+    <div id="background image" class="bg-[url('./images/Axiom_2_verticaldaytime_051823_Axiom_2_verticaldaytime_051823_DSC_1344_desktop_3d44b9ee16.jpg')]
+     flex flex-row bg-cover relative h-screen">
+     <div class="absolute top-80 left-12 space-y-5">
+      <h2 class="font-dinbold text-white text-xl">UPCOMING LAUNCH</h2>
+      <h1 class="text-5xl font-bold text-white font-dinbold">AX-2 MISSION</h1>
+      <button class="text-white text-sm font-dinbold border-2 font-bold py-4 px-14 my-10
+      hover:bg-white hover:text-black transition-all duration-400 slide" >WATCH</button>
+    </div>
+    </div>
+    <!-- background image 3 -->
+    <div id="background image" class="bg-[url('./images/Star6_3_DSC_1360_desktop_3dcfb70bb0.jpg')]
+     flex flex-row bg-cover relative h-screen">
+     <div class="absolute top-80 left-12 space-y-5">
+      <h2 class="font-dinbold text-white text-xl">RECENT LAUNCH</h2>
+      <h1 class="text-5xl font-bold text-white font-dinbold">STARLINK MISSION</h1>
+      <button class="text-white text-sm font-dinbold border-2 font-bold py-4 px-10 my-10
+      hover:bg-white hover:text-black transition-all duration-400 slide">REWATCH</button>
+    </div>
+    </div>
+  <!-- background image 4 -->
+    <div id="background image" class="bg-[url('./images/Haven1_Hero_5_2600x1400_a23f540f5f.jpg')]
+     flex flex-row bg-cover relative h-screen">
+     <div class="absolute top-80 left-12 space-y-5">
+      <h1 class="text-5xl font-bold text-white font-dinbold">SPACEX TO LAUNCH <br> VAST’S COMMERCIAL <br> SPACE STATION</h1>
+      <button class="text-white text-sm font-dinbold border-2 font-bold py-4 px-10 my-10
+      hover:bg-white hover:text-black transition-all duration-400 slide">LEARN MORE</button>
+    </div>
+    </div>
+    <!-- backgrouond image 5 -->
+    <div id="background image" class="bg-[url('./images/STARSHIP_Testflight_DESKTOP_2b3bea613a.jpg')]
+     flex flex-row bg-cover relative h-screen">
+     <div class="absolute top-80 left-12 space-y-5">
+      <h2 class="font-dinbold text-white text-xl">RECENT</h2>
+      <h1 class="text-5xl font-bold text-white font-dinbold">STARSHIP FLIGHT TEST</h1>
+      <button class="text-white text-sm font-dinbold border-2 font-bold py-4 px-10 my-10
+      hover:bg-white hover:text-black transition-all duration-400 slide">REWATCH</button>
+    </div>
+    </div>
+    <!-- Footer -->
+    <div class="flex flex-row bg-black justify-center items-center space-x-8 py-10 w-full">
+      <p class="text-white text-[12px] font-dinbold">SPACEX © 2023</p>
+      <ul class="inline-flex">
+        <li class="text-white font-dinbold text-[12px] font-bold hover:opacity-70
+        transition-all duration-500 mr-8"><a href="#">TWITTER</a></li>
+        <li class="text-white font-dinbold text-[12px] font-bold hover:opacity-70
+        transition-all duration-500 mr-8"><a href="#">YOUTUBE</a></li>
+        <li class="text-white font-dinbold text-[12px] font-bold hover:opacity-70
+        transition-all duration-500 mr-8"><a href="#">INSTAGRAM</a></li>
+        <li class="text-white font-dinbold text-[12px] font-bold hover:opacity-70
+        transition-all duration-500 mr-8"><a href="#">FLICKER</a></li>
+        <li class="text-white font-dinbold text-[12px] font-bold hover:opacity-70
+        transition-all duration-500 mr-8"><a href="#">LINKDIN</a></li>
+        <li class="text-white font-dinbold text-[12px] font-bold hover:opacity-70
+        transition-all duration-500 mr-8"><a href="#">PRIVACY POLICY</a></li>
+        <li class="text-white font-dinbold text-[12px] font-bold hover:opacity-70
+        transition-all duration-500 mr-8"><a href="#">SUPPLIERS</a></li>
+      </ul>
+    </div>
+</body>
+
+</html>
